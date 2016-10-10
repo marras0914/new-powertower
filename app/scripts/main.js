@@ -114,8 +114,15 @@ $(document).ready(function() {
     var usdaModal = document.getElementById('usda-modal');
 
 
-    var close = document.getElementsByClassName('close');
+    var closen = document.getElementById('close-na');
+    var closej = document.getElementById('close-jumbo');
+    var closef = document.getElementById('close-fha');
+    var closec = document.getElementById('close-conv');
+    var closea = document.getElementById('close-usda');
 
+
+    var items = carousel.querySelectorAll('.content li');
+    // var current = items[0];
 
     na.addEventListener('click', displayModalNA);
     jumbo.addEventListener('click', displayModalJumbo);
@@ -123,79 +130,81 @@ $(document).ready(function() {
     conv.addEventListener('click', displayModalConv);
     usda.addEventListener('click', displayModalUSDA);
 
-    // overlay.addEventListener('click', closeModal);
-    // close.addEventListener('click', closeModal);
-
-
+    overlay.addEventListener('click', closeModal);
+    closen.addEventListener('click', closeModal);
+    closej.addEventListener('click', closeModal);
+    closef.addEventListener('click', closeModal);
+    closec.addEventListener('click', closeModal);
+    closea.addEventListener('click', closeModal);
+ 
     function displayModalNA(){
-        console.log("i was clicked")
         carousel.classList.add('active');
+        naModal.classList.add('current');
+        navigate(0);
     }
 
     function displayModalJumbo(){
         carousel.classList.add('active');
+        jumboModal.classList.add('current');
+        navigate(1);
     }
 
     function displayModalFHA(){
-        overlay.classList.add('show');
-        fhaModal.classList.add('show');
-        overlay.classList.remove('close');
+        carousel.classList.add('active');
+        fhaModal.classList.add('current');
+        navigate(2);
     }
 
     function displayModalConv(){
-        overlay.classList.add('show');
-        convModal.classList.add('show');
-        overlay.classList.remove('close');
+        carousel.classList.add('active');
+        convModal.classList.add('current');
+        navigate(3);
     }
 
     function displayModalUSDA(){
-        overlay.classList.add('show');
-        usdaModal.classList.add('show');
-        overlay.classList.remove('close');
+        carousel.classList.add('active');
+        usdaModal.classList.add('current');
+        navigate(4);
     }
 
 
     function closeModal(){
-        overlay.classList.add('close');
-        setTimeout(function(){
-            overlay.classList.remove('show');
-        }, 500);
+        carousel.classList.remove('active');
+        counter = 0;
+        current.classList.remove('current');
+        
     }
 
-})();
 
-
-
-
-(function(){
-  var box = document.querySelector('.carouselbox');
-  var next = box.querySelector('.next');
-  var prev = box.querySelector('.prev');
-  var items = box.querySelectorAll('.content li');
-  var counter = 0;
-  var amount = items.length;
-  var current = items[0];
-  // box.classList.add('active');
-  function navigate(direction) {
-    current.classList.remove('current');
-    counter = counter + direction;
-    if (direction === -1 && 
-        counter < 0) { 
-      counter = amount - 1; 
-    }
-    if (direction === 1 && 
-        !items[counter]) { 
-      counter = 0;
-    }
-    current = items[counter];
-    current.classList.add('current');
-  }
-  next.addEventListener('click', function(ev) {
-    navigate(1);
-  });
-  prev.addEventListener('click', function(ev) {
-    navigate(-1);
-  });
-  navigate(0);
+    // carousel naviagtion
+      var box = document.querySelector('.carouselbox');
+      var next = box.querySelector('.next');
+      var prev = box.querySelector('.prev');
+      var items = box.querySelectorAll('.content li');
+      var counter = 0;
+      var amount = items.length;
+      var current = items[0];
+      // box.classList.add('active');
+      function navigate(direction) {
+        current.classList.remove('current');
+        counter = counter + direction;
+        if (direction === -1 && 
+            counter < 0) { 
+          counter = amount - 1; 
+        }
+        if (direction === 1 && 
+            !items[counter]) { 
+          counter = 0;
+        }
+        current = items[counter];
+        current.classList.add('current');
+      }
+      next.addEventListener('click', function(ev) {
+        navigate(1);
+      });
+      prev.addEventListener('click', function(ev) {
+        navigate(-1);
+      });
+      navigate(0);
 })();
 
