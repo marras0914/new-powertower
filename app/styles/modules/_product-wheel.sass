@@ -1,0 +1,124 @@
+.product-wheel
+	position: absolute
+	top: 550px
+	width: 100%
+	.wheel
+		width: 300px
+		left: 50%
+		margin-left: -150px
+		position: absolute
+		z-index: 10 
+		animation: spin 5s linear infinite
+	.shadow
+		width: 500px
+		margin-left: -250px
+		position: absolute
+		left: 50%
+		top: -100px
+		z-index: 1
+		animation: spin-shadow 5s linear infinite
+	.dots
+		width: 350px
+		height: auto
+		position: absolute
+		left: 50%
+		margin-left: -175px
+		top: -30px
+		z-index: 9
+		animation: spin 5s linear infinite
+		display: none
+	.outer-ring
+		width: 390px
+		height: auto
+		position: absolute
+		left: 50%
+		margin-left: -195px
+		top: -40px
+		z-index: 8
+		animation: spin 5s linear infinite
+		
+	.inside-content
+		position: absolute
+		text-align: center
+		text-transform: uppercase
+		color: $blue
+		font-size: 2rem
+		font-family: 'Gotham Bold'
+		letter-spacing: 1px  
+		z-index: 11
+		width: 100%
+		left: 50%
+		margin-left: -50%
+		top: 120px
+	
+	.outer-dots
+		width: 440px
+		height: auto
+		position: absolute
+		left: 50%
+		margin-left: -220px
+		top: -74px
+		z-index: 9
+		animation: spin-shadow 5s linear infinite
+		// display: none
+			  
+	.branch
+		position: absolute
+		&-usda
+			top: -175px
+			left: 65%
+		&-conv
+			top: 100px
+			left: 75%
+		&-fha
+			top: 300px
+			left: 50%
+		&-jumbo
+			top: 240px
+			left: 5%
+		&-na
+			top: 0px
+			left: 5%
+		
+@keyframes spin
+	0%
+		transform: rotate(0deg) scale(1)
+	50%
+		transform: rotate(45deg) scale(1.1)
+	100%
+		transform: rotate(0deg) scale(1)
+
+
+@keyframes spin-shadow
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.1)
+	100%
+		transform: scale(1)
+		
+// 	width: 100px
+// 	height: 100px
+// 	background: #eee
+// 	border-radius: 50%
+// 	position: relative
+// 	margin: 50px
+// 	display: inline-block
+
+// 	&:after, &:before
+// 		content: ''
+// 		display: block
+// 		width: 100px
+// 		height: 100px
+// 		border-radius: 50%
+
+
+// .spinner-1:after
+// 	position: absolute
+// 	top: -4px
+// 	left: -4px
+// 	border: 4px solid transparent
+// 	border-top-color: orangered
+// 	border-bottom-color: orangered
+// 	animation: spinny 1s linear infinite
+	

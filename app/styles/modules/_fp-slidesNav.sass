@@ -1,0 +1,84 @@
+.fp-slidesNav
+    position: absolute
+    z-index: 4
+    left: 50%
+    opacity: 1
+    
+    &.bottom 
+        bottom: 25px
+    
+
+    &.top 
+        top: 17px
+    
+
+
+#fp-nav ul,
+.fp-slidesNav ul 
+    margin: 0
+    padding: 0
+    
+    li 
+        display: block
+        width: 100px
+        height: 100px
+        margin: 7px
+        position: relative
+        display: inline-block
+        // content: 'TEST'
+
+        a 
+            display: block
+            position: relative
+            z-index: 1
+            width: 100%
+            height: 100%
+            cursor: pointer
+            text-decoration: none
+            // content: 'TEST'
+            &.active span 
+                height: 12px
+                width: 12px
+                margin: -6px 0 0 -6px
+                border-radius: 100%
+
+                #fp-nav ul li:hover &,
+                #fp-slidesNav ul li:hover & 
+                    height: 12px
+                    width: 12px
+                    margin: -6px 0 0 -6px
+                    border-radius: 100%
+                
+            
+
+            span 
+                border-radius: 50%
+                position: absolute
+                z-index: 1
+                height: 60px
+                width: 60px
+                border: 0
+                // background: #333
+                left: 50%
+                top: 50%
+                margin: -2px 0 0 -2px
+                -webkit-transition: all 0.1s ease-in-out
+                -moz-transition: all 0.1s ease-in-out
+                -o-transition: all 0.1s ease-in-out
+                transition: all 0.1s ease-in-out
+                content: 'test'
+            
+        
+
+        &:hover 
+
+            a 
+                span 
+                    width: 10px
+                    height: 10px
+                    margin: -5px 0px 0px -5px
+                
+            
+        
+
+    
