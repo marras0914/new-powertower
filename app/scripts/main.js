@@ -67,35 +67,48 @@ $(document).ready(function() {
     });
 });
 
+// (function () {
+//     var vid = document.getElementById("bg-video");
+//     // var pauseButton = document.querySelector("#pause-button");
+
+//     function vidFade() {
+//     vid.classList.add("stopfade");
+//     }
+
+//     vid.addEventListener('ended', function()
+//     {
+//     // only functional if "loop" is removed 
+//     vid.pause();
+//     // to capture IE10
+//     vidFade();
+//     }); 
+
+
+//     pauseButton.addEventListener("click", function() {
+//     vid.classList.toggle("stopfade");
+//     if (vid.paused) {
+//     vid.play();
+//     pauseButton.innerHTML = "Pause";
+//     } else {
+//     vid.pause();
+//     pauseButton.innerHTML = "Paused";
+//     }
+//     })
+// })();
+
 (function () {
-    var vid = document.getElementById("bg-video");
-    // var pauseButton = document.querySelector("#pause-button");
+    var usda = document.getElementById('usda');
 
-    function vidFade() {
-    vid.classList.add("stopfade");
+    usda.addEventListener('click', displayModalUSDA);
+
+    function displayModalUSDA(){
+    var overlay = document.getElementById('slide-container');
+        // usda.addEventListener('mouseenter', function(){
+            overlay.classList.add('show');
+        // });
+     
+
     }
-
-    vid.addEventListener('ended', function()
-    {
-    // only functional if "loop" is removed 
-    vid.pause();
-    // to capture IE10
-    vidFade();
-    }); 
-
-
-    pauseButton.addEventListener("click", function() {
-    vid.classList.toggle("stopfade");
-    if (vid.paused) {
-    vid.play();
-    pauseButton.innerHTML = "Pause";
-    } else {
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-    }
-    })
-
-
 
 
 })();
