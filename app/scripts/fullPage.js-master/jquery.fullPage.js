@@ -11,7 +11,7 @@
         define(['jquery'], function($) {
           return factory($, global, global.document, global.Math);
         });
-    } else if (typeof exports === "object" && exports) {
+    } else if (typeof exports === 'object' && exports) {
         module.exports = factory(require('jquery'), global, global.document, global.Math);
     } else {
         factory(jQuery, global, global.document, global.Math);
@@ -1453,7 +1453,7 @@
             }
 
             // If continuousVertical && we need to wrap around
-            if (options.autoScrolling && options.continuousVertical && typeof (v.isMovementUp) !== "undefined" &&
+            if (options.autoScrolling && options.continuousVertical && typeof (v.isMovementUp) !== 'undefined' &&
                 ((!v.isMovementUp && v.yMovement == 'up') || // Intending to scroll down but about to go up or
                 (v.isMovementUp && v.yMovement == 'down'))) { // intending to scroll up but about to go down
 
@@ -1771,7 +1771,7 @@
             var activeElement = $(':focus');
 
             if(!activeElement.is('textarea') && !activeElement.is('input') && !activeElement.is('select') &&
-                activeElement.attr('contentEditable') !== "true" && activeElement.attr('contentEditable') !== '' &&
+                activeElement.attr('contentEditable') !== 'true' && activeElement.attr('contentEditable') !== '' &&
                 options.keyboardScrolling && options.autoScrolling){
                 var keyCode = e.which;
 
@@ -2479,7 +2479,7 @@
             text = text.replace('/', '-').replace('#','');
 
             //removing previous anchor classes
-            var classRe = new RegExp('\\b\\s?' + VIEWING_PREFIX + '-[^\\s]+\\b', "g");
+            var classRe = new RegExp('\\b\\s?' + VIEWING_PREFIX + '-[^\\s]+\\b', 'g');
             $body[0].className = $body[0].className.replace(classRe, '');
 
             //adding the current anchor
@@ -2541,9 +2541,9 @@
             var _addEventListener;
 
             if (window.addEventListener){
-                _addEventListener = "addEventListener";
+                _addEventListener = 'addEventListener';
             }else{
-                _addEventListener = "attachEvent";
+                _addEventListener = 'attachEvent';
                 prefix = 'on';
             }
 

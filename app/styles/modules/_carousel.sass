@@ -1,0 +1,44 @@
+.slide-container
+	.arrow
+		position: absolute
+		top: 40% 
+		color: $white
+		font-size: 4rem
+	.prev
+		left: 15%
+	.next 
+		right: 15%
+		
+.carouselbox 
+	box-shadow: 10px 10px 10px #000
+	overflow: hidden
+.content 
+	margin: 0
+	padding: 0
+
+.content li 
+	font-size: 3rem
+	margin: 0
+	padding: 0
+	// width: 100%
+	list-style: none
+	text-align: center
+
+.active 
+	height: 1520px
+	display: block
+
+.active li 
+	position: absolute
+	top: 1520px
+	
+	opacity: 0
+	transform:  translateY(2000px)
+	transition: 1s
+
+.active li.current 
+	top: 90px
+	
+	opacity: 1
+	transform:  translateY(0px)
+	transition: 1s

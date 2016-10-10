@@ -1914,7 +1914,7 @@
         text = text.replace('/', '-').replace('#','');
 
         //removing previous anchor classes
-        var classRe = new RegExp('\\b\\s?' + VIEWING_PREFIX + '-[^\\s]+\\b', "g");
+        var classRe = new RegExp('\\b\\s?' + VIEWING_PREFIX + '-[^\\s]+\\b', 'g');
         document.body.className = document.body.className.replace(classRe, '');
 
         //adding the current anchor

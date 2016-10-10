@@ -39,8 +39,8 @@
                    
                     <div class="video-wrapper">
                         <video poster="images/screen-shot.jpg" id="bg-video" playsinline autoplay muted loop>
-                            <source src="images/video/Loop.webm" type="video/webm">
-                            <source src="images/video/Loop.mp4" type="video/mp4">
+                            <source src="./images/video/Loop.webm" type="video/webm">
+                            <source src="./images/video/Loop.mp4" type="video/mp4">
                         </video>
                     </div>
                     <a href="#1/slide2"><button>Start Here</button></a>
@@ -54,7 +54,7 @@
                 </div>
                
                 <div class="img-circle">
-                    <img src="images/sec-2-hero.png" alt="">
+                    <img src="./images/sec-2-hero.png" alt="">
                 </div>
                 <div class="smaller">Expand</div>
                 <div class="header">
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="light-box">
-                    <img src="images/quotes.png" alt="">
+                    <img src="./images/quotes.png" alt="">
                     <p>
                         We have been so pleased that Pacific Union offers flexibility with delegated and non-delegated for both government and conventional loans. It shows such a common sense approach to understand that there are times when we can underwrite files but there are also times when we need the end servicer to underwrite and even insure a loan. Other investors aren’t willing to take the time to figure out how to be so flexible.”
                     </p>
@@ -95,7 +95,7 @@
                 </div>
                
                 <div class="img-circle">
-                    <img src="images/sec-4-hero.png" alt="">
+                    <img src="./images/sec-4-hero.png" alt="">
                 </div>
                 <div class="smaller">business</div>
                 <div class="header">
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="light-box">
-                    <img src="images/quotes.png" alt="">
+                    <img src="./images/quotes.png" alt="">
                     <p>
                        Pacific Union has earned our business as a preferred investor. Pacific Union’s client support staff provides strong product knowledge and underwriting support. They clearly are focused on providing exemplary customer service throughout the loan delivery process.
                     </p>
@@ -134,15 +134,15 @@
                     <span class="triangle-overlay"></span>
                 </div>
                 <div class="faces-container">
-                    <img src="images/people/person-1.png" alt="" class="person person-1">
-                    <img src="images/people/person-2.png" alt="" class="person person-2">
-                    <img src="images/people/person-3.png" alt="" class="person person-3">
-                    <img src="images/people/person-4.png" alt="" class="person person-4">
-                    <img src="images/people/person-5-fade.png" alt="" class="person person-5">
-                    <img src="images/people/person-6.png" alt="" class="person person-6">
-                    <img src="images/people/person-7.png" alt="" class="person person-7">
-                    <img src="images/people/person-8.png" alt="" class="person person-8">
-                    <img src="images/people/person-9-fade.png" alt="" class="person person-9">
+                    <img src="./images/people/person-1.png" alt="" class="person person-1">
+                    <img src="./images/people/person-2.png" alt="" class="person person-2">
+                    <img src="./images/people/person-3.png" alt="" class="person person-3">
+                    <img src="./images/people/person-4.png" alt="" class="person person-4">
+                    <img src="./images/people/person-5-fade.png" alt="" class="person person-5">
+                    <img src="./images/people/person-6.png" alt="" class="person person-6">
+                    <img src="./images/people/person-7.png" alt="" class="person person-7">
+                    <img src="./images/people/person-8.png" alt="" class="person person-8">
+                    <img src="./images/people/person-9-fade.png" alt="" class="person person-9">
                 </div>
                 <div class="header">Your team of</div>
                 <div class="number">23</div>
@@ -159,27 +159,129 @@
                 <div class="number">Products</div>
                 <div class="product-wheel">
                     <div class="inside-content">Expand your<br>Possibilities</div>
-                    <img src="images/product-ring.svg" alt="" class="wheel">
-                    <img src="images/ring-shadow.svg" alt="" class="shadow">
-                    <img src="images/dots-and-ring.svg" alt="" class="dots">
-                    <img src="images/dots-and-ring.svg" alt="" class="outer-dots">
-                    <img src="images/outer-ring.svg" alt="" class="outer-ring">
+                    <img src="./images/product-ring.svg" alt="" class="wheel">
+                    <img src="./images/ring-shadow.svg" alt="" class="shadow">
+                    <img src="./images/dots-and-ring.svg" alt="" class="dots">
+                    <img src="./images/dots-and-ring.svg" alt="" class="outer-dots">
+                    <img src="./images/outer-ring.svg" alt="" class="outer-ring">
 
 
-                    <img src="images/branch-USDA.png" id="usda" class="branch branch-usda" alt="">
-                    <a href="" id="conv"><img src="images/branch-conventional.png" class="branch branch-conv" alt=""></a>
-                    <a href="" id="fha"><img src="images/branch-FHA.png" class="branch branch-fha" alt=""></a>
-                    <a href="" id="jumbo"><img src="images/branch-Jumbo.png" class="branch branch-jumbo" alt=""></a>
-                    <a href="" id="non-agency"><img src="images/branch-non-agency.png" class="branch branch-na" alt=""></a>
+                    <img src="./images/branch-non-agency.png" id="non-agency" class="branch branch-na"  alt="">
+                    <img src="./images/branch-Jumbo.png" id="jumbo" class="branch branch-jumbo" alt="">
+                    <img src="./images/branch-FHA.png" id="fha" class="branch branch-fha" alt="">
+                    <img src="./images/branch-conventional.png" id="conv" class="branch branch-conv" alt="">
+                    <img src="./images/branch-USDA.png" id="usda" class="branch branch-usda" alt="">
                 </div>
 
-                <div id="slide-container">
-                    <div class="slide-usda">
-                        test   1
-                    </div>
-                    <div class="slide-conv">
-                        test 2222
-                    </div>
+                <div id="slide-container" class="slide-container carouselbox" role="listbox">
+                    <div id="overlay" class="overlay"></div>
+                    <div class="prev arrow glyphicon glyphicon-chevron-left"></div>
+                    <div class="next arrow glyphicon glyphicon-chevron-right"></div>
+                    <ul class="content">
+                        <!-- non-agency modal -->
+                        <li id="non-agency-modal" class="modal">
+                            <img src="./images/modal-na-img.png" alt="">
+                            
+                            <div class="header">Non-agency flexkey</div>
+
+                            <div class="content">
+                                • Restart Program: Minimum FICO 560 <br>
+                                • Expanded Program: Minimum FICO 600 <br>
+                                • Fully Amortized Fixed Rate and 5/1 ARM; &nbsp;&nbsp;&nbsp;Fixed Rate Interest Only <br>
+                                • Cash-out available on Primary Residence, &nbsp;&nbsp;&nbsp;Second Home and Investment <br>
+                                • Reduced seasoning on Bankruptcy, &nbsp;&nbsp;&nbsp;Foreclosure, Short Sale and Deed-In-Lieu <br>
+                                • Alternative income documentation for <br> &nbsp;&nbsp;&nbsp;self-employed borrowers and wage earner &nbsp;&nbsp;&nbsp;borrowers <br>
+                                • Non-warrantable condos <br>
+                                • Non-occupying co-borrowers <br>
+                                • Manual Underwriting required <br>
+                            </div>
+                            <div class="close">
+                               X
+                               <span>Close</span>
+                            </div>
+                        </li>
+                        <!-- jumbo modal -->
+                        <li id="jumbo-modal" class="modal">
+                            <img src="./images/modal-jumbo-img.png" alt="">
+                            
+                            <div class="header">Jumbo Loan</div>
+
+                            <div class="content">
+                                • Pacific Prime: Non-Agency Prime Jumbo loans <br>
+                                • Minimum credit score: 700 <br>
+                                • Manual Underwriting required <br>
+                                • Maximum loan amount: $2,000,000 <br>
+                                • Fixed Rate and ARM
+                            </div>
+                            <div class="close">
+                               X
+                               <span>Close</span>
+                            </div>
+                        </li>
+                        <!-- fha modal -->
+                        <li id="fha-modal" class="modal">
+                            <img src="./images/modal-fha-img.png" alt="">
+                            
+                            <div class="header">FHA Loan</div>
+
+                            <div class="content">
+                                • Fixed Rate and ARM <br>
+                                • Manufactured Homes are eligible <br>
+                                • No minimum credit score streamline  &nbsp;&nbsp;&nbsp;refinances allowed <br> 
+                                • Gift funds allowed for down payment and  &nbsp;&nbsp;&nbsp;closing costs <br>
+                                • Minimum credit score: 560 <br>
+                                • Escrow Holdback allowed <br>
+                                • HUD REO <br>
+                                • Manual Underwrites <br>
+                                • Back-to-Work program <br>
+                                • Blended ratios allowed 
+                            </div>
+                            <div class="close">
+                               X
+                               <span>Close</span>
+                            </div>
+                        </li>
+                        <!-- conv modal -->
+                        <li id="conv-modal" class="modal">
+                            <img src="./images/modal-conv-img.png" alt="">
+                            
+                            <div class="header">Conventional Loan</div>
+
+                            <div class="content">
+                                • Fannie Mae HomeReady® <br>
+                                • Freddie Mac Home Possible® <br>
+                                • Minimum credit score: 620 <br>
+                                • Escrow Holdback allowed <br>
+                                • Blended ratios allowed <br>
+                                • Fannie Mae DU Refi Plus <br>
+                                • Freddie Mac Relief Refinance - Open Access <br>
+                            </div>
+                            <div class="close">
+                               X
+                               <span>Close</span>
+                            </div>
+                        </li>
+                        <!-- usda modal -->
+                        <li id="usda-modal" class="modal">
+                            <img src="./images/modal-usda-img.png" alt="">
+                            
+                            <div class="header">USDA Loan</div>
+
+                            <div class="content">
+                                Minimum credit score: 581 <br>
+                                • 100% maximum LTV <br>
+                                • Manual Underwrites <br>
+                                • No maximum loan amount <br>
+                                • USDA Streamlined-Assist: no credit report, DTI  &nbsp;&nbsp;&nbsp;ratio, appraisal for existing guaranteed loans, &nbsp;&nbsp;&nbsp;or property inspection required <br>
+                                • Streamlined and Rate/Term refinances allowed <br>
+                                • Manufactured Homes are eligible
+                            </div>
+                            <div class="close">
+                               X
+                               <span>Close</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 
             </section>
@@ -188,7 +290,7 @@
                 <div class="title">About</div>                
                 <div class="header">Pacific&nbsp;Union Financial</div>
                 <div class="badges">
-                    <img src="images/badges.png" alt="">
+                    <img src="./images/badges.png" alt="">
                 </div>
                 <div class="content">
                     In 2004 we started out with a mission to serve the underserved markets in government lending. Since it’s inception, Pacific Union has built a business serving lenders, brokers and borrowers based on relationships of trust, integrity and respect. We are not a pass-through – we retain servicing on our loans and take care of our borrowers. We don’t solicit borrowers for other products – we protect your lending relationships with your customers. 
@@ -206,7 +308,7 @@
                 </div>
 
                 <div class="light-box">
-                    <img src="images/quotes.png" alt="">
+                    <img src="./images/quotes.png" alt="">
                     <p>
                        Having been in this business for more than 20 years, I have seldom done business with a company that delivers what was promised when initially solicited for business. Pacific Union is one of the few that does. Their service in every department has been excellent and our account representative is one of the best I have encountered. 
                     </p>
@@ -235,7 +337,7 @@
             </ul>
         </nav>
         <div class="disclaimer-container">
-            <img src="images/puf-disclaimer.png" alt="" class="disclaimer">
+            <img src="./images/puf-disclaimer.png" alt="" class="disclaimer">
         </div>
     </div>
    
@@ -260,7 +362,7 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <!--<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script> -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
