@@ -12,7 +12,7 @@
 .carouselbox 
 	box-shadow: 10px 10px 10px #000
 	overflow: hidden
-	animation: fade-out 1s ease-in
+	
 .content 
 	margin: 0
 	padding: 0
@@ -28,7 +28,11 @@
 .active 
 	height: 1520px
 	display: block
-
+	
+	// animation: fade-in 1s ease-in
+	z-index: 100
+	opacity: 1
+	
 .active li 
 	position: absolute
 	top: 1520px
@@ -43,3 +47,6 @@
 	opacity: 1
 	transform:  translateY(0px)
 	transition: 1s
+
+.closed
+	animation: fade-out 1s ease-out

@@ -139,6 +139,7 @@ $(document).ready(function() {
  
     function displayModalNA(){
         carousel.classList.add('active');
+        // carousel.classList.remove('closed');
         naModal.classList.add('current');
         navigate(0);
     }
@@ -170,6 +171,7 @@ $(document).ready(function() {
 
     function closeModal(){
         carousel.classList.remove('active');
+        // carousel.classList.add('closed');
         counter = 0;
         current.classList.remove('current');
         
