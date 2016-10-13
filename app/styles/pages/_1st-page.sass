@@ -24,13 +24,16 @@
 			right: 0
 			border-left: 40px solid transparent
 	
-	.container
+	.button-container
 		background-color: $green
 		position: absolute
 		width: 100%
-		height: 30%
+		height: 35%
 		bottom: 0
 		left: 0
+		right: 0
+		
+		margin: 0
 		text-align: center
 		span
 			text-transform: uppercase
@@ -43,8 +46,8 @@
 
 	a
 		width: 40%
-		height: 5%
-		top: 73%
+		height: 12%
+		top: 5%
 		left: 50%
 		margin-left: -20%
 		position: absolute
@@ -63,5 +66,21 @@
 		text-transform: uppercase
 		// text-decoration: none
 		margin-left: 0
+		position: absolute
 		&:active
 			background-color: rgba(255,255,255,0.2) 
+			
+	.glyphicon-pause, .glyphicon-play 
+		position: absolute
+		font-size: 3.5rem
+		top: 0
+		color: $white
+		&.active
+			color: rgba(255,255,255,0.2) 
+	
+	.glyphicon-play 
+		right: 5%
+	
+	.glyphicon-pause
+		right: 9%
+		  

@@ -232,7 +232,7 @@ $(document).ready(function(){
     var homeSlide = document.getElementById('home-slide');
     var vid = document.getElementById('bg-video');
     var pauseButton = document.getElementById('pause');
-
+    var playButton = document.getElementById('play');
     function vidFade() {
         vid.classList.add("stopfade");
     }
@@ -249,15 +249,29 @@ $(document).ready(function(){
         vid.classList.toggle("stopfade");
         if (vid.paused) {
             vid.play();
-            pauseButton.innerHTML = "Pause";
+            $(playButton).addClass('active');
+            $(pauseButton).removeClass('active');
+            // pauseButton.innerHTML = "Pause";
         } else {
             vid.pause();
-            pauseButton.innerHTML = "Paused";
+            $(pauseButton).addClass('active');
+            $(playButton).removeClass('active');
+            // pauseButton.innerHTML = "Paused";
         }
     });
-    if (homeSlide.classList.contains('active')){
-         vid.play();
-
-         console.log('on homeSlide');
-    }
+    playButton.addEventListener("click", function() {
+        vid.classList.toggle("stopfade");
+        if (vid.paused) {
+            vid.play();
+            $(playButton).addClass('active');
+            $(pauseButton).removeClass('active');
+            // pauseButton.innerHTML = "Pause";
+        } else {
+            vid.pause();
+            $(pauseButton).addClass('active');
+            $(playButton).removeClass('active');
+            // pauseButton.innerHTML = "Paused";
+        }
+    });
+  
 })();
