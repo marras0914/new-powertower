@@ -70,6 +70,8 @@ $(document).ready(function(){
             if(anchorLink == '1' && slideIndex == 0){
                 $('#menu li').removeClass('active');
                 $('#menu li:eq(0)').addClass('active');
+                document.getElementById('bg-video').play();
+
             }
 
             if(anchorLink == '1' && slideIndex == 1){
