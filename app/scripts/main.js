@@ -78,23 +78,31 @@ $(document).ready(function(){
                 $('#menu li').removeClass('active');
                 $('#menu li:eq(1)').addClass('active');
             }
-
+            if(anchorLink == '1' && slideIndex == 2){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(1)').addClass('active');
+            }
             if(anchorLink == '1' && slideIndex == 3){
                 $('#menu li').removeClass('active');
                 $('#menu li:eq(2)').addClass('active');
             }
-
+            if(anchorLink == '1' && slideIndex == 4){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(2)').addClass('active');
+            }
             if(anchorLink == '1' && slideIndex == 5){
                 $('#menu li').removeClass('active');
                 $('#menu li:eq(3)').addClass('active');
             }
-
             if(anchorLink == '1' && slideIndex == 6){
                 $('#menu li').removeClass('active');
                 $('#menu li:eq(4)').addClass('active');
             }
-
             if(anchorLink == '1' && slideIndex == 7){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(5)').addClass('active');
+            }
+            if(anchorLink == '1' && slideIndex == 8){
                 $('#menu li').removeClass('active');
                 $('#menu li:eq(5)').addClass('active');
             }
