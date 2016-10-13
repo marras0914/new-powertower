@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>sites</title>
+    <title>Pacific Union Financial, LLC</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -34,18 +34,28 @@
 
         <div class="section">
             <!-- first slide -->
-            <section class="slide" data-anchor="slide1">
-                <div class="first-page">
+            <section class="slide first-page" data-anchor="slide1" id="home-slide">
+               
                    
-                    <div class="video-wrapper">
-                        <video poster="images/screen-shot.jpg" id="bg-video" playsinline autoplay muted loop>
-                            <source src="./images/video/Loop.webm" type="video/webm">
-                            <source src="./images/video/Loop.mp4" type="video/mp4">
+                    <div class="video-wrapper jquery-background-video-wrapper">
+                        <video id="bg-video" preload="auto" autoplay loop="true" >
+                            <source src="./images/video/Loop734x720.webm" type="video/webm">
+                            <!-- <source src="./images/video/home-v2-high.mp4" type="video/mp4"> -->
+                            <!-- 
+                            <source src="./images/video/home.ogv" type="video/ogv"> -->
+                            <!-- <source src="./images/video/home.webm" type="video/webm"> -->
+                            <!-- <source src="./images/video/Loop734x720.mp4" type="video/mp4"> -->
+                                Your browser does not support the video tag.
                         </video>
+                            
                     </div>
-                    <a href="#1/slide2"><button>Start Here</button></a>
+                    <div class="container">
+                        <span>start</span>
+                        <button id="pause">pause</button>
+                    </div>
+                    <!-- <a href="#1/slide2"><button>Start Here</button></a> -->
                     
-                </div>
+               
             </section>
             <!-- second slide   -->
             <section class="slide second-page" data-anchor="slide2">
@@ -72,7 +82,7 @@
                 </div>
 
                 <div class="circle">
-                    <img src="/images/cim-group.png" alt="">
+                    <img src="./images/cim-group.png" alt="">
                 </div>
 
                 <div class="light-box">
@@ -112,7 +122,7 @@
                 </div>
 
                 <div class="circle">
-                    <img src="/images/sec-5-top-bullet.png" alt="">
+                    <img src="./images/sec-5-top-bullet.png" alt="">
                 </div>
 
                 <div class="light-box">
@@ -287,6 +297,9 @@
             </section>
             <!-- eigth slide -->
             <section class="slide eigth-page" data-anchor="slide8">
+                <div class="overlay-container">
+                    <span class="triangle-overlay"></span>
+                </div>
                 <div class="title">About</div>                
                 <div class="header">Pacific&nbsp;Union Financial</div>
                 <div class="badges">
@@ -304,7 +317,7 @@
                 </div>
 
                 <div class="circle">
-                    <img src="/images/sec-9-top-bullet.jpg" alt="">
+                    <img src="./images/sec-9-top-bullet.jpg" alt="">
                 </div>
 
                 <div class="light-box">
@@ -373,11 +386,10 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="scripts/fullpage.scrollHorizontally.min.js"></script>
     <script src="scripts/fullPage.js-master/jquery.fullPage.min.js"></script>
     <script src="scripts/main.js"></script>
-
+    
     <!-- endbuild -->
   </body>
 </html>

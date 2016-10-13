@@ -1,10 +1,12 @@
-$(document).ready(function() {
+$(document).ready(function(){
+
+
     $('#fullpage').fullpage({
-    	
-    	//Navigation
-        // menu: '#menu',
+        
+        //Navigation
+        menu: '#menu',
         lockAnchors: false,
-       	anchors: ['1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9'],
+        anchors: ['1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9'],
         // navigation: false,
         // navigationPosition: 'right',
         // navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -59,45 +61,20 @@ $(document).ready(function() {
 
         //events
         onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
+        afterLoad: function(anchorLink, index){
+            document.getElementById('bg-video').play(); 
+        },
         afterRender: function(){},
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-    });
+
+   });
 });
-
-// (function () {
-//     var vid = document.getElementById("bg-video");
-//     // var pauseButton = document.querySelector("#pause-button");
-
-//     function vidFade() {
-//     vid.classList.add("stopfade");
-//     }
-
-//     vid.addEventListener('ended', function()
-//     {
-//     // only functional if "loop" is removed 
-//     vid.pause();
-//     // to capture IE10
-//     vidFade();
-//     }); 
-
-
-//     pauseButton.addEventListener("click", function() {
-//     vid.classList.toggle("stopfade");
-//     if (vid.paused) {
-//     vid.play();
-//     pauseButton.innerHTML = "Pause";
-//     } else {
-//     vid.pause();
-//     pauseButton.innerHTML = "Paused";
-//     }
-//     })
-// })();
+           
 
 (function () {
-
+    //product page/ carousel navigation
     var overlay = document.getElementById('overlay');
     var carousel = document.getElementById('slide-container');
 
@@ -210,3 +187,40 @@ $(document).ready(function() {
       navigate(0);
 })();
 
+
+
+
+// $(document).ready(function() {
+//     document.getElementById('bg-video').play(); 
+// });
+
+
+(function () {
+    var homeSlide = document.getElementById('home-slide');
+    var vid = document.getElementById('bg-video');
+    var pauseButton = document.getElementById('pause');
+
+    function vidFade() {
+        vid.classList.add("stopfade");
+    }
+
+    vid.addEventListener('ended', function(){
+        // only functional if "loop" is removed 
+        vid.pause();
+        // to capture IE10
+        vidFade();
+    }); 
+
+
+    pauseButton.addEventListener("click", function() {
+        vid.classList.toggle("stopfade");
+        if (vid.paused) {
+            vid.play();
+            pauseButton.innerHTML = "Pause";
+        } else {
+            vid.pause();
+            pauseButton.innerHTML = "Paused";
+        }
+    });
+
+})();
