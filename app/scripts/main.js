@@ -66,7 +66,38 @@ $(document).ready(function(){
         },
         afterRender: function(){},
         afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+            if(anchorLink == '1' && slideIndex == 0){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(0)').addClass('active');
+            }
+
+            if(anchorLink == '1' && slideIndex == 1){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(1)').addClass('active');
+            }
+
+            if(anchorLink == '1' && slideIndex == 3){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(2)').addClass('active');
+            }
+
+            if(anchorLink == '1' && slideIndex == 5){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(3)').addClass('active');
+            }
+
+            if(anchorLink == '1' && slideIndex == 6){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(4)').addClass('active');
+            }
+
+            if(anchorLink == '1' && slideIndex == 7){
+                $('#menu li').removeClass('active');
+                $('#menu li:eq(5)').addClass('active');
+            }
+
+        },
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 
    });
@@ -222,5 +253,9 @@ $(document).ready(function(){
             pauseButton.innerHTML = "Paused";
         }
     });
+    if (homeSlide.classList.contains('active')){
+         vid.play();
 
+         console.log('on homeSlide');
+    }
 })();
