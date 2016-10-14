@@ -170,7 +170,7 @@
                     <img src="./images/dots-and-ring.svg" alt="" class="outer-dots">
                     <img src="./images/outer-ring.svg" alt="" class="outer-ring">
 
-
+                     <img src="./images/branch-VA.png" id="va" class="branch branch-va"  alt="">
                     <img src="./images/branch-non-agency.png" id="non-agency" class="branch branch-na"  alt="">
                     <img src="./images/branch-Jumbo.png" id="jumbo" class="branch branch-jumbo" alt="">
                     <img src="./images/branch-FHA.png" id="fha" class="branch branch-fha" alt="">
@@ -185,31 +185,32 @@
                     <ul class="content">
                         <!-- non-agency modal -->
                         <li id="non-agency-modal" class="modal">
-                            <img src="./images/modal-na-img.png" alt="">
-                            
+                            <div class="img-circle">
+                                <img src="./images/modal-na-img.png" alt="">
+                            </div>
                             <div class="header">Non-agency flexkey</div>
 
                             <div class="content">
                                 • Restart Program: Minimum FICO 560 <br>
                                 • Expanded Program: Minimum FICO 600 <br>
-                                • Fully Amortized Fixed Rate and 5/1 ARM; &nbsp;&nbsp;&nbsp;Fixed Rate Interest Only <br>
-                                • Cash-out available on Primary Residence, &nbsp;&nbsp;&nbsp;Second Home and Investment <br>
-                                • Reduced seasoning on Bankruptcy, &nbsp;&nbsp;&nbsp;Foreclosure, Short Sale and Deed-In-Lieu <br>
+                                • Fully Amortized Fixed Rate and 5/1 ARM;<br> &nbsp;&nbsp;&nbsp;Fixed Rate Interest Only <br>
+                                • Cash-out available on Primary Residence,<br> &nbsp;&nbsp;&nbsp;Second Home and Investment <br>
+                                • Reduced seasoning on Bankruptcy, Foreclosure, &nbsp;&nbsp;&nbsp;Short Sale and Deed-In-Lieu <br>
                                 • Alternative income documentation for <br> &nbsp;&nbsp;&nbsp;self-employed borrowers and wage earner &nbsp;&nbsp;&nbsp;borrowers <br>
                                 • Non-warrantable condos <br>
                                 • Non-occupying co-borrowers <br>
                                 • Manual Underwriting required <br>
                             </div>
-                            <div class="close" id="close-na">
-                               X
+                            <div class="close  glyphicon glyphicon-remove-circle" id="close-na">
                                <span>Close</span>
                             </div>
                         </li>
                         <!-- jumbo modal -->
                         <li id="jumbo-modal" class="modal">
-                            <img src="./images/modal-jumbo-img.png" alt="">
-                            
-                            <div class="header">Jumbo Loan</div>
+                            <div class="img-circle">
+                                <img src="./images/modal-jumbo-img.png" alt="">
+                            </div>
+                            <div class="header">Jumbo Loans</div>
 
                             <div class="content">
                                 • Pacific Prime: Non-Agency Prime Jumbo loans <br>
@@ -218,16 +219,17 @@
                                 • Maximum loan amount: $2,000,000 <br>
                                 • Fixed Rate and ARM
                             </div>
-                            <div class="close" id="close-jumbo">
-                               X
+                            <div class="close  glyphicon glyphicon-remove-circle" id="close-jumbo">
                                <span>Close</span>
                             </div>
                         </li>
                         <!-- fha modal -->
                         <li id="fha-modal" class="modal">
-                            <img src="./images/modal-fha-img.png" alt="">
-                            
-                            <div class="header">FHA Loan</div>
+                            <div class="img-circle">
+                                <img src="./images/modal-fha-img.png" alt="">
+                            </div>
+
+                            <div class="header">FHA Loans</div>
 
                             <div class="content">
                                 • Fixed Rate and ARM <br>
@@ -241,16 +243,16 @@
                                 • Back-to-Work program <br>
                                 • Blended ratios allowed 
                             </div>
-                            <div class="close" id="close-fha">
-                               X
+                            <div class="close  glyphicon glyphicon-remove-circle" id="close-fha">
                                <span>Close</span>
                             </div>
                         </li>
                         <!-- conv modal -->
                         <li id="conv-modal" class="modal">
-                            <img src="./images/modal-conv-img.png" alt="">
-                            
-                            <div class="header">Conventional Loan</div>
+                            <div class="img-circle">
+                                <img src="./images/modal-conv-img.png" alt="">
+                            </div>
+                            <div class="header">Conventional Loans</div>
 
                             <div class="content">
                                 • Fannie Mae HomeReady® <br>
@@ -261,16 +263,17 @@
                                 • Fannie Mae DU Refi Plus <br>
                                 • Freddie Mac Relief Refinance - Open Access <br>
                             </div>
-                            <div class="close" id="close-conv">
-                               X
+                            <div class="close  glyphicon glyphicon-remove-circle" id="close-conv">
                                <span>Close</span>
                             </div>
                         </li>
                         <!-- usda modal -->
                         <li id="usda-modal" class="modal">
-                            <img src="./images/modal-usda-img.png" alt="">
-                            
-                            <div class="header">USDA Loan</div>
+                            <div class="img-circle">
+                                <img src="./images/modal-usda-img.png" alt="">
+                            </div>
+
+                            <div class="header">USDA Loans</div>
 
                             <div class="content">
                                 Minimum credit score: 581 <br>
@@ -281,8 +284,29 @@
                                 • Streamlined and Rate/Term refinances allowed <br>
                                 • Manufactured Homes are eligible
                             </div>
-                            <div class="close" id="close-usda">
-                               X
+                            <div class="close  glyphicon glyphicon-remove-circle" id="close-usda">
+                               <span>Close</span>
+                            </div>
+                        </li>
+                         <!-- va modal -->
+                        <li id="va-modal" class="modal">
+                            <div class="img-circle">
+                                <img src="./images/modal-va-img.png" alt="">
+                            </div>
+                            <div class="header">VA Loans</div>
+
+                            <div class="content">
+                                • Minimum credit score: 560 <br> &nbsp;&nbsp;&nbsp;(with the exception of VA IRRRL transactions) <br>
+                                • IRRRL: Up to 130% LTV with or without an appraisal<br>
+                                • Cash-out up to 100% LTV<br>
+                                • Manual Underwrites<br>
+                                • Fixed Rate and ARM<br>
+                                • Escrow Holdback allowed<br>
+                                • Foreclosure/Short Sale/Bankruptcy<br>
+                                  &nbsp;&nbsp;&nbsp;&gt;2 years allowed with AUS Approval<br>
+                                • Manufactured Homes are eligible<br>
+                            </div>
+                            <div class="close  glyphicon glyphicon-remove-circle" id="close-va">
                                <span>Close</span>
                             </div>
                         </li>
@@ -382,7 +406,7 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/fullpage.scrollHorizontally.min.js"></script>
-    <script src="scripts/fullPage.js-master/jquery.fullPage.min.js"></script>
+    <script src="scripts/jquery.fullPage.min.js"></script>
     <script src="scripts/main.js"></script>
     
     <!-- endbuild -->

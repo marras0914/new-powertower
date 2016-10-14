@@ -62,18 +62,17 @@ $(document).ready(function(){
         //events
         onLeave: function(index, nextIndex, direction){},
         afterLoad: function(anchorLink, index){
-            document.getElementById('bg-video').play(); 
+            // document.getElementById('bg-video').play(); 
         },
         afterRender: function(){},
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+            
             if(anchorLink == '1' && slideIndex == 0){
                 $('#menu li').removeClass('active');
                 $('#menu li:eq(0)').addClass('active');
                 document.getElementById('bg-video').play();
-
             }
-
             if(anchorLink == '1' && slideIndex == 1){
                 $('#menu li').removeClass('active');
                 $('#menu li:eq(1)').addClass('active');
@@ -124,12 +123,14 @@ $(document).ready(function(){
     var fha = document.getElementById('fha');
     var conv = document.getElementById('conv');
     var usda = document.getElementById('usda');
+    var va = document.getElementById('va');
 
     var naModal = document.getElementById('non-agency-modal');
     var jumboModal = document.getElementById('jumbo-modal');
     var fhaModal = document.getElementById('fha-modal');
     var convModal = document.getElementById('conv-modal');
     var usdaModal = document.getElementById('usda-modal');
+    var vaModal = document.getElementById('va-modal');
 
 
     var closen = document.getElementById('close-na');
@@ -137,6 +138,7 @@ $(document).ready(function(){
     var closef = document.getElementById('close-fha');
     var closec = document.getElementById('close-conv');
     var closea = document.getElementById('close-usda');
+    var closev = document.getElementById('close-va');
 
 
     var items = carousel.querySelectorAll('.content li');
@@ -147,6 +149,7 @@ $(document).ready(function(){
     fha.addEventListener('click', displayModalFHA);
     conv.addEventListener('click', displayModalConv);
     usda.addEventListener('click', displayModalUSDA);
+    va.addEventListener('click', displayModalVA);
 
     overlay.addEventListener('click', closeModal);
     closen.addEventListener('click', closeModal);
@@ -154,6 +157,7 @@ $(document).ready(function(){
     closef.addEventListener('click', closeModal);
     closec.addEventListener('click', closeModal);
     closea.addEventListener('click', closeModal);
+    closev.addEventListener('click', closeModal);
  
     function displayModalNA(){
         carousel.classList.add('active');
@@ -186,6 +190,11 @@ $(document).ready(function(){
         navigate(4);
     }
 
+    function displayModalVA(){
+        carousel.classList.add('active');
+        vaModal.classList.add('current');
+        navigate(5);
+    }
 
     function closeModal(){
         carousel.classList.remove('active');
@@ -242,7 +251,7 @@ $(document).ready(function(){
     var pauseButton = document.getElementById('pause');
     var playButton = document.getElementById('play');
     function vidFade() {
-        vid.classList.add("stopfade");
+        vid.classList.add('stopfade');
     }
 
     vid.addEventListener('ended', function(){
@@ -253,8 +262,8 @@ $(document).ready(function(){
     }); 
 
 
-    pauseButton.addEventListener("click", function() {
-        vid.classList.toggle("stopfade");
+    pauseButton.addEventListener('click', function() {
+        vid.classList.toggle('stopfade');
         if (vid.paused) {
             vid.play();
             $(playButton).addClass('active');
@@ -267,8 +276,8 @@ $(document).ready(function(){
             // pauseButton.innerHTML = "Paused";
         }
     });
-    playButton.addEventListener("click", function() {
-        vid.classList.toggle("stopfade");
+    playButton.addEventListener('click', function() {
+        vid.classList.toggle('stopfade');
         if (vid.paused) {
             vid.play();
             $(playButton).addClass('active');
