@@ -67,43 +67,47 @@ $(document).ready(function(){
         afterRender: function(){},
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+            $('.person').removeClass('active');
+            switch ( slideIndex ){
+                case 0: 
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(0)').addClass('active');
+                    document.getElementById('bg-video').play();
+                    break;
+                case 1:
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(1)').addClass('active');
+                    break;
+                case 2:
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(1)').addClass('active');
+                    break;
+                case 3:
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(2)').addClass('active');
+                    break;
+                case 4: 
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(2)').addClass('active');
+                    break;
+                case 5:
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(3)').addClass('active');
+                    $('.person').addClass('active');
+                    break;
+                case 6:
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(4)').addClass('active');
+                    break;
+                case 7:
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(5)').addClass('active');
+                    break;
+                case 8:
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(5)').addClass('active');
+                    break;
             
-            if(anchorLink == '1' && slideIndex == 0){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(0)').addClass('active');
-                document.getElementById('bg-video').play();
-            }
-            if(anchorLink == '1' && slideIndex == 1){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(1)').addClass('active');
-            }
-            if(anchorLink == '1' && slideIndex == 2){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(1)').addClass('active');
-            }
-            if(anchorLink == '1' && slideIndex == 3){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(2)').addClass('active');
-            }
-            if(anchorLink == '1' && slideIndex == 4){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(2)').addClass('active');
-            }
-            if(anchorLink == '1' && slideIndex == 5){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(3)').addClass('active');
-            }
-            if(anchorLink == '1' && slideIndex == 6){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(4)').addClass('active');
-            }
-            if(anchorLink == '1' && slideIndex == 7){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(5)').addClass('active');
-            }
-            if(anchorLink == '1' && slideIndex == 8){
-                $('#menu li').removeClass('active');
-                $('#menu li:eq(5)').addClass('active');
             }
 
         },
