@@ -68,6 +68,7 @@ $(document).ready(function(){
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
             $('.person').removeClass('active');
+            $('.slide').removeClass('current');
             switch ( slideIndex ){
                 case 0: 
                     $('#menu li').removeClass('active');
@@ -83,6 +84,7 @@ $(document).ready(function(){
                     // page 3
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(1)').addClass('active');
+                    $('.third-page').addClass('current');
                     break;
                 case 3:
                     // page 4
@@ -93,6 +95,7 @@ $(document).ready(function(){
                     // page 5
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(2)').addClass('active');
+                    $('.fifth-page').addClass('current');
                     break;
                 case 5:
                     // page 6
@@ -115,6 +118,7 @@ $(document).ready(function(){
                     // page 9
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(5)').addClass('active');
+                    $('.ninth-page').addClass('current');
                     break;
             
             }
