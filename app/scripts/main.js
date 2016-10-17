@@ -75,35 +75,44 @@ $(document).ready(function(){
                     document.getElementById('bg-video').play();
                     break;
                 case 1:
+                    // page 2
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(1)').addClass('active');
                     break;
                 case 2:
+                    // page 3
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(1)').addClass('active');
                     break;
                 case 3:
+                    // page 4
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(2)').addClass('active');
                     break;
                 case 4: 
+                    // page 5
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(2)').addClass('active');
                     break;
                 case 5:
+                    // page 6
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(3)').addClass('active');
+                    // $('.faces-container').addClass('active');
                     $('.person').addClass('active');
                     break;
                 case 6:
+                    // page 7
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(4)').addClass('active');
                     break;
                 case 7:
+                    // page 8
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(5)').addClass('active');
                     break;
                 case 8:
+                    // page 9
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(5)').addClass('active');
                     break;
