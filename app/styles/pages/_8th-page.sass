@@ -23,7 +23,41 @@
 		position: absolute
 		top: 35%
 		width: 90%
+		height: 10%
 		margin-left: 5% 
+		color: $white
+		display: block
+		
+	.badge
+		width: 13%
+		color: $white
+		height: auto
+		position: absolute
+		opacity: 0
+		&.active
+			@for $i from 1 through 5
+				&:nth-child(#{$i})
+					animation:
+						name: popup
+						duration: 300ms
+						delay: (150ms * $i) - 150ms
+						timing-function: ease-in-out
+						fill-mode: forwards
+		&-1
+			left: 6.666%
+			width: 14%
+			top: -2px
+		&-2
+			left: 25.333%
+		&-3	
+			left: 41.999%
+			width: 17%
+			top: -7px
+		&-4
+			left: 62.666%
+		&-5
+			left: 81.333%
+		
 	.content
 		position: absolute
 		color: $white
@@ -35,3 +69,4 @@
 		text-align: center
 		top: 50%
 		 
+		

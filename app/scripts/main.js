@@ -69,6 +69,7 @@ $(document).ready(function(){
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
             $('.person').removeClass('active');
             $('.slide').removeClass('current');
+             $('.badge').removeClass('active');
             switch ( slideIndex ){
                 case 0: 
                     $('#menu li').removeClass('active');
@@ -113,6 +114,7 @@ $(document).ready(function(){
                     // page 8
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(5)').addClass('active');
+                    $('.badge').addClass('active');
                     break;
                 case 8:
                     // page 9
