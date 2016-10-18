@@ -69,7 +69,7 @@ $(document).ready(function(){
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
             $('.person').removeClass('active');
             $('.slide').removeClass('current');
-             $('.badge').removeClass('active');
+            $('.badge').removeClass('active');
             switch ( slideIndex ){
                 case 0: 
                     $('#menu li').removeClass('active');

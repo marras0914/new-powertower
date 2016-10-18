@@ -23,11 +23,19 @@
 			span
 				padding: 4% 0
 		
-		&:active, &.active
+		&.active, &:active
 		 	background-color: rgba(255,255,255,0.4)
 		 	&:nth-child(4), &:nth-child(5)
 		 		background-color: rgba(0,0,0,0.1)
-	
+		&:active		 	
+		 	animation:
+				animation-name: pulse
+				animation-duration: 2s
+				transform-origin: 70% 70%
+				animation-iteration-count: infinite
+				animation-timing-function: linear
+			
+
 	span
 		position: absolute
 		height: 80%
@@ -44,7 +52,17 @@
 			color: $white
 			
 
-// @keyframes pulse
+@keyframes pulse
+	0%
+		transform: scale(1)
+	25%
+		transform: scale(1.08)
+	50%
+		transform: scale(1)
+	70%
+		transform: scale(1.05)
+	100%
+		transform: scale(1)
 // 	0%, 100%
 // 		background-color: rgba(255,255,255,0.4)
 // 	50%
