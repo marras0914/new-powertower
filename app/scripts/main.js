@@ -125,8 +125,8 @@ $(document).ready(function(){
             
             }
 
-        },
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        }
+        // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 
    });
 });
