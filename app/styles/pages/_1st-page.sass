@@ -32,12 +32,12 @@
 		bottom: 0
 		left: 0
 		right: 0
-		
+		z-index: 30
 		margin: 0
 		text-align: center
 		span
 			text-transform: uppercase
-			color: $white 
+			// color: $white 
 	
 
 	.fp-controlArrow
@@ -72,9 +72,10 @@
 			
 	.glyphicon-pause, .glyphicon-play 
 		position: absolute
-		font-size: 3.5rem
-		top: 90%
-		color: $white
+		font-size: 3rem
+		top: 67%
+		color: rgba(255,255,255,0.8) 
+		z-index: 30
 		&.active
 			color: rgba(255,255,255,0.2) 
 	
