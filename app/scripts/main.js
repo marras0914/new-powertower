@@ -70,13 +70,13 @@ $(document).ready(function(){
             $('.person').removeClass('active');
             $('.slide').removeClass('current');
             $('.badge').removeClass('active');
-            $(".fp-controlArrow").removeClass('no-show');
+            $('.fp-controlArrow').removeClass('no-show');
             switch ( slideIndex ){
                 case 0: 
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(0)').addClass('active');
                     document.getElementById('bg-video').play();
-                    $(".fp-controlArrow").addClass('no-show');
+                    $('.fp-controlArrow').addClass('no-show');
                     break;
                 case 1:
                     // page 2
