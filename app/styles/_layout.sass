@@ -48,6 +48,7 @@ button
 
 
 .fp-controlArrow
+	animation: arrow-show 300ms linear
 	&.fp-prev, &.fp-next
 		background-size: 100%
 		background-repeat: no-repeat 
@@ -60,3 +61,18 @@ button
 	&.fp-next
 		background-image: url(../images/right-arrow.png)
 		
+.no-show
+	opacity: 0
+	animation: arrow-no-show 0.5s linear
+	
+@keyframes arrow-show
+	0%
+		transform: scale(0)
+	100%
+		transform: scale(1)
+
+@keyframes arrow-no-show
+	0%
+		transform: scale(1)
+	100%
+		transform: scale(0)
