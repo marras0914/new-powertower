@@ -2,7 +2,7 @@
 	width: 100%
 	height: 100%
 	position: relative
-	background-color: $green
+	background-color: $blue
 	text-align: center
 	-webkit-font-smoothing: antialiased;
 section
@@ -46,6 +46,11 @@ button
 	&:active
 		background-color: rgba(255,255,255,0.2) 
 
+#nav
+	animation: arrow-show 300ms linear
+	&.no-show
+		display: none
+	
 
 .fp-controlArrow
 	animation: arrow-show 300ms linear

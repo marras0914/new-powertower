@@ -64,18 +64,23 @@ $(document).ready(function(){
         afterLoad: function(anchorLink, index){
             // document.getElementById('bg-video').play(); 
         },
-        afterRender: function(){},
+        afterRender: function(){
+            $('#nav').addClass('no-show');
+            $('.fp-controlArrow').addClass('no-show');
+        },
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
             $('.person').removeClass('active');
             $('.slide').removeClass('current');
             $('.badge').removeClass('active');
             $('.fp-controlArrow').removeClass('no-show');
+             $('#nav').removeClass('no-show');
             switch ( slideIndex ){
                 case 0: 
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(0)').addClass('active');
-                    document.getElementById('bg-video').play();
+                    // document.getElementById('bg-video').play();
+                    $('#nav').addClass('no-show');
                     $('.fp-controlArrow').addClass('no-show');
                     break;
                 case 1:
@@ -266,50 +271,50 @@ $(document).ready(function(){
 // });
 
 
-(function () {
-    var homeSlide = document.getElementById('home-slide');
-    var vid = document.getElementById('bg-video');
-    var pauseButton = document.getElementById('pause');
-    var playButton = document.getElementById('play');
-    function vidFade() {
-        vid.classList.add('stopfade');
-    }
+// (function () {
+//     var homeSlide = document.getElementById('home-slide');
+//     var vid = document.getElementById('bg-video');
+//     var pauseButton = document.getElementById('pause');
+//     var playButton = document.getElementById('play');
+//     function vidFade() {
+//         vid.classList.add('stopfade');
+//     }
 
-    vid.addEventListener('ended', function(){
-        // only functional if "loop" is removed 
-        vid.pause();
-        // to capture IE10
-        vidFade();
-    }); 
+//     vid.addEventListener('ended', function(){
+//         // only functional if "loop" is removed 
+//         vid.pause();
+//         // to capture IE10
+//         vidFade();
+//     }); 
 
 
-    pauseButton.addEventListener('click', function() {
-        vid.classList.toggle('stopfade');
-        if (vid.paused) {
-            vid.play();
-            $(playButton).addClass('active');
-            $(pauseButton).removeClass('active');
-            // pauseButton.innerHTML = "Pause";
-        } else {
-            vid.pause();
-            $(pauseButton).addClass('active');
-            $(playButton).removeClass('active');
-            // pauseButton.innerHTML = "Paused";
-        }
-    });
-    playButton.addEventListener('click', function() {
-        vid.classList.toggle('stopfade');
-        if (vid.paused) {
-            vid.play();
-            $(playButton).addClass('active');
-            $(pauseButton).removeClass('active');
-            // pauseButton.innerHTML = "Pause";
-        } else {
-            vid.pause();
-            $(pauseButton).addClass('active');
-            $(playButton).removeClass('active');
-            // pauseButton.innerHTML = "Paused";
-        }
-    });
+//     pauseButton.addEventListener('click', function() {
+//         vid.classList.toggle('stopfade');
+//         if (vid.paused) {
+//             vid.play();
+//             $(playButton).addClass('active');
+//             $(pauseButton).removeClass('active');
+//             // pauseButton.innerHTML = "Pause";
+//         } else {
+//             vid.pause();
+//             $(pauseButton).addClass('active');
+//             $(playButton).removeClass('active');
+//             // pauseButton.innerHTML = "Paused";
+//         }
+//     });
+//     playButton.addEventListener('click', function() {
+//         vid.classList.toggle('stopfade');
+//         if (vid.paused) {
+//             vid.play();
+//             $(playButton).addClass('active');
+//             $(pauseButton).removeClass('active');
+//             // pauseButton.innerHTML = "Pause";
+//         } else {
+//             vid.pause();
+//             $(pauseButton).addClass('active');
+//             $(playButton).removeClass('active');
+//             // pauseButton.innerHTML = "Paused";
+//         }
+//     });
   
-})();
+// })();
