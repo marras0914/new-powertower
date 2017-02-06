@@ -73,8 +73,11 @@ $(document).ready(function(){
             $('.person').removeClass('active');
             $('.slide').removeClass('current');
             $('.badge').removeClass('active');
+            
+            // $('.modal').removeClass('current');
+            // $('#slide-container').removeClass('active');
             $('.fp-controlArrow').removeClass('no-show');
-             $('#nav').removeClass('no-show');
+            $('#nav').removeClass('no-show');
             switch ( slideIndex ){
                 case 0: 
                     $('#menu li').removeClass('active');
@@ -137,139 +140,134 @@ $(document).ready(function(){
                     break;
             
             }
+            //product page/ carousel navigation
+            var overlay = document.getElementById('overlay');
+            var carousel = document.getElementById('slide-container');
 
+            var na = document.getElementById('non-agency');
+            var jumbo = document.getElementById('jumbo');
+            var fha = document.getElementById('fha');
+            var conv = document.getElementById('conv');
+            var usda = document.getElementById('usda');
+            var va = document.getElementById('va');
+
+            var naModal = document.getElementById('non-agency-modal');
+            var jumboModal = document.getElementById('jumbo-modal');
+            var fhaModal = document.getElementById('fha-modal');
+            var convModal = document.getElementById('conv-modal');
+            var usdaModal = document.getElementById('usda-modal');
+            var vaModal = document.getElementById('va-modal');
+
+
+            var closen = document.getElementById('close-na');
+            var closej = document.getElementById('close-jumbo');
+            var closef = document.getElementById('close-fha');
+            var closec = document.getElementById('close-conv');
+            var closea = document.getElementById('close-usda');
+            var closev = document.getElementById('close-va');
+
+
+            var items = carousel.querySelectorAll('.content li');
+            // var current = items[0];
+
+            na.addEventListener('click', displayModalNA);
+            jumbo.addEventListener('click', displayModalJumbo);
+            fha.addEventListener('click', displayModalFHA);
+            conv.addEventListener('click', displayModalConv);
+            usda.addEventListener('click', displayModalUSDA);
+            va.addEventListener('click', displayModalVA);
+
+            overlay.addEventListener('click', closeModal);
+            closen.addEventListener('click', closeModal);
+            closej.addEventListener('click', closeModal);
+            closef.addEventListener('click', closeModal);
+            closec.addEventListener('click', closeModal);
+            closea.addEventListener('click', closeModal);
+            closev.addEventListener('click', closeModal);
+         
+            function displayModalNA(){
+                carousel.classList.add('active');
+                // carousel.classList.remove('closed');
+                naModal.classList.add('current');
+                navigate(0);
+            }
+
+            function displayModalJumbo(){
+                carousel.classList.add('active');
+                jumboModal.classList.add('current');
+                navigate(1);
+            }
+
+            function displayModalFHA(){
+                carousel.classList.add('active');
+                fhaModal.classList.add('current');
+                navigate(2);
+            }
+
+            function displayModalConv(){
+                carousel.classList.add('active');
+                convModal.classList.add('current');
+                navigate(3);
+            }
+
+            function displayModalUSDA(){
+                carousel.classList.add('active');
+                usdaModal.classList.add('current');
+                navigate(4);
+            }
+
+            function displayModalVA(){
+                carousel.classList.add('active');
+                vaModal.classList.add('current');
+                navigate(5);
+            }
+
+            function closeModal(){
+                carousel.classList.remove('active');
+                // carousel.classList.add('closed');
+                counter = 0;
+                current.classList.remove('current');
+                
+            }
+
+
+            // carousel naviagtion
+              var box = document.querySelector('.carouselbox');
+              var next = box.querySelector('.next');
+              var prev = box.querySelector('.prev');
+              var items = box.querySelectorAll('.content li');
+              var counter = 0;
+              var amount = items.length;
+              var current = items[0];
+              // box.classList.add('active');
+              function navigate(direction) {
+                current.classList.remove('current');
+                counter = counter + direction;
+                if (direction === -1 && 
+                    counter < 0) { 
+                  counter = amount - 1; 
+                }
+                if (direction === 1 && 
+                    !items[counter]) { 
+                  counter = 0;
+                }
+                current = items[counter];
+                current.classList.add('current');
+              }
+              next.addEventListener('click', function(ev) {
+                navigate(1);
+              });
+              prev.addEventListener('click', function(ev) {
+                navigate(-1);
+              });
+              navigate(0);
+              closeModal();
         }
         // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 
    });
 });
            
-
-(function () {
-    //product page/ carousel navigation
-    var overlay = document.getElementById('overlay');
-    var carousel = document.getElementById('slide-container');
-
-    var na = document.getElementById('non-agency');
-    var jumbo = document.getElementById('jumbo');
-    var fha = document.getElementById('fha');
-    var conv = document.getElementById('conv');
-    var usda = document.getElementById('usda');
-    var va = document.getElementById('va');
-
-    var naModal = document.getElementById('non-agency-modal');
-    var jumboModal = document.getElementById('jumbo-modal');
-    var fhaModal = document.getElementById('fha-modal');
-    var convModal = document.getElementById('conv-modal');
-    var usdaModal = document.getElementById('usda-modal');
-    var vaModal = document.getElementById('va-modal');
-
-
-    var closen = document.getElementById('close-na');
-    var closej = document.getElementById('close-jumbo');
-    var closef = document.getElementById('close-fha');
-    var closec = document.getElementById('close-conv');
-    var closea = document.getElementById('close-usda');
-    var closev = document.getElementById('close-va');
-
-
-    var items = carousel.querySelectorAll('.content li');
-    // var current = items[0];
-
-    na.addEventListener('click', displayModalNA);
-    jumbo.addEventListener('click', displayModalJumbo);
-    fha.addEventListener('click', displayModalFHA);
-    conv.addEventListener('click', displayModalConv);
-    usda.addEventListener('click', displayModalUSDA);
-    va.addEventListener('click', displayModalVA);
-
-    overlay.addEventListener('click', closeModal);
-    closen.addEventListener('click', closeModal);
-    closej.addEventListener('click', closeModal);
-    closef.addEventListener('click', closeModal);
-    closec.addEventListener('click', closeModal);
-    closea.addEventListener('click', closeModal);
-    closev.addEventListener('click', closeModal);
- 
-    function displayModalNA(){
-        carousel.classList.add('active');
-        // carousel.classList.remove('closed');
-        naModal.classList.add('current');
-        navigate(0);
-    }
-
-    function displayModalJumbo(){
-        carousel.classList.add('active');
-        jumboModal.classList.add('current');
-        navigate(1);
-    }
-
-    function displayModalFHA(){
-        carousel.classList.add('active');
-        fhaModal.classList.add('current');
-        navigate(2);
-    }
-
-    function displayModalConv(){
-        carousel.classList.add('active');
-        convModal.classList.add('current');
-        navigate(3);
-    }
-
-    function displayModalUSDA(){
-        carousel.classList.add('active');
-        usdaModal.classList.add('current');
-        navigate(4);
-    }
-
-    function displayModalVA(){
-        carousel.classList.add('active');
-        vaModal.classList.add('current');
-        navigate(5);
-    }
-
-    function closeModal(){
-        carousel.classList.remove('active');
-        // carousel.classList.add('closed');
-        counter = 0;
-        current.classList.remove('current');
-        
-    }
-
-
-    // carousel naviagtion
-      var box = document.querySelector('.carouselbox');
-      var next = box.querySelector('.next');
-      var prev = box.querySelector('.prev');
-      var items = box.querySelectorAll('.content li');
-      var counter = 0;
-      var amount = items.length;
-      var current = items[0];
-      // box.classList.add('active');
-      function navigate(direction) {
-        current.classList.remove('current');
-        counter = counter + direction;
-        if (direction === -1 && 
-            counter < 0) { 
-          counter = amount - 1; 
-        }
-        if (direction === 1 && 
-            !items[counter]) { 
-          counter = 0;
-        }
-        current = items[counter];
-        current.classList.add('current');
-      }
-      next.addEventListener('click', function(ev) {
-        navigate(1);
-      });
-      prev.addEventListener('click', function(ev) {
-        navigate(-1);
-      });
-      navigate(0);
-})();
-
-
 
 
 // $(document).ready(function() {
