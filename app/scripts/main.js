@@ -6,7 +6,7 @@ $(document).ready(function(){
         //Navigation
         menu: '#menu',
         lockAnchors: false,
-        anchors: ['1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9'],
+        anchors: ['1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
         // navigation: false,
         // navigationPosition: 'right',
         // navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -113,18 +113,24 @@ $(document).ready(function(){
                     $('.person').addClass('active');
                     break;
                 case 6:
-                    // page 7
+                    // page 7    ##new page##
                     $('#menu li').removeClass('active');
-                    $('#menu li:eq(4)').addClass('active');
+                    $('#menu li:eq(3)').addClass('active');
+                    $('.tenth-page').addClass('current');
                     break;
                 case 7:
                     // page 8
                     $('#menu li').removeClass('active');
-                    $('#menu li:eq(5)').addClass('active');
-                    $('.badge').addClass('active');
+                    $('#menu li:eq(4)').addClass('active');
                     break;
                 case 8:
                     // page 9
+                    $('#menu li').removeClass('active');
+                    $('#menu li:eq(5)').addClass('active');
+                    $('.badge').addClass('active');
+                    break;
+                case 9:
+                    // page10
                     $('#menu li').removeClass('active');
                     $('#menu li:eq(5)').addClass('active');
                     $('.ninth-page').addClass('current');
